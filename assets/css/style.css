@@ -36,69 +36,21 @@ hr {
   min-width: 300px;
 }
 
-.view-scores {
-  text-decoration: none;
-}
-
-/* section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
- */
 h2 {
   font-size: 36px;
   margin: 20px;
 }
 
-.description {
-  width: 500px;
-}
-
-.question {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Configures the animations of the answers buttons */
-@keyframes correct-blinking {
-  0% {
-    background-color: #66ff00;
-  }
-  50% {
-    background-color: #00a519;
-  }
-  100% {
-    background-color: #66ff00;
-  }
-}
-
-@keyframes wrong-blinking {
-  0% {
-    background-color: #ff4040;
-  }
-  50% {
-    background-color: #970000;
-  }
-  100% {
-    background-color: #ff4040;
-  }
-}
-
 /* Reseting and styling buttons */
 button {
   all: unset;
-  background-color: rgb(0, 136, 255);
-  color: aliceblue;
   font-size: 20px;
   margin: 5px;
   padding: 10px;
   border-radius: 5px;
   min-width: 300px;
   cursor: pointer;
+  text-align: center;
 }
 
 button:hover {
@@ -108,15 +60,20 @@ button:active {
   background-color: rgb(105, 105, 105);
 }
 
+button.search-btn {
+  background-color: rgb(0, 136, 255);
+  color: aliceblue;
+}
+
+button.search-btn:hover {
+  background-color: rgb(86, 152, 227);
+}
+button.search-btn:active {
+  background-color: rgb(105, 105, 105);
+}
+
 button.history-btn {
-  all: unset;
   background-color: rgb(148, 148, 148);
-  font-size: 20px;
-  margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  min-width: 300px;
-  cursor: pointer;
 }
 
 button.history-btn:hover {
@@ -129,10 +86,6 @@ button.history-btn:active {
 /* Adds a default margin of 10px */
 .m-1 {
   margin: 10px;
-}
-
-.history {
-  text-align: center;
 }
 
 /* Container for the row/column system */
@@ -164,27 +117,46 @@ button.history-btn:active {
   flex-basis: 100%;
 }
 
-div.result {
+div.today-forecast {
   border: 1px solid black;
   padding: 5px;
+  min-width: 500px;
 }
 
-div.result h3 {
+div.today-forecast h3 {
   font-size: 28px;
   font-weight: bold;
 }
 
-div.result * {
-  margin-bottom: 10px;
+div.today-forecast * {
+  margin-bottom: 15px;
 }
 
 div.card {
   color: #fff;
   background-color: rgb(44, 53, 70);
   padding: 10px;
-  width: 140px;
+  width: 200px;
 }
 
 div.card * {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+img {
+  width: 50px;
+}
+
+.five-day-forecast {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.five-day-forecast * {
+  margin: 10px;
+}
+
+#search-col #history {
+  display: flex;
+  flex-direction: column;
 }

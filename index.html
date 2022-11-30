@@ -5,7 +5,8 @@
     <title>Code Quiz - Index</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="./assets/js/scripttt.js" defer></script>
   </head>
   <body>
     <header>
@@ -13,26 +14,17 @@
     </header>
     <main class="flex-container">
       <section class="flex-row" id="intro">
-        <section class="flex-col-1">
+        <section class="flex-col-1" id="search-col">
           <label for="title">Search for a City:</label>
-          <input class="m-1 title" id="title" />
-          <button class="m-1" id="startBtn">Search</button>
+          <input class="m-1 title" id="city-input" />
+          <button class="m-1 search-btn" id="search-btn">Search</button>
           <hr />
-          <button class="history-btn">dsasd</button>
+          <div class="history" id="history"></div>
         </section>
         <section class="flex-col-4">
-          <div class="result">
-            <h3>Atlanta <span>(9/13/2022)</span></h3>
-            <p>Temperature: <span>76.62 F</span></p>
-            <p>Wind: <span>8.43 MPH</span></p>
-            <p>Humidity: <span>44 %</span></p>
-          </div>
-          <div class="5-day">
-            <h3>5-Day Forecast:</h3>
-            <div class="card">
-              <p>9/14/2022</p>
-              <p>EMOJI</p>
-              <p>Temp: 63.55 F</p>
+          <div class="today-forecast" id="today-forecast"></div>
+          <h3>5-Day Forecast:</h3>
+          <div class="five-day-forecast" id="five-day-forecast">
             </div>
           </div>
         </section>
