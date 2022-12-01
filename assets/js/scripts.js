@@ -74,6 +74,7 @@ $(function () {
             printForecast(data);
             localStorage.setItem(data.city.name, JSON.stringify(data));
             printHistoryBtns();
+            cityInput.val("");
           });
         } else {
           alert("Error: City " + response.statusText);
