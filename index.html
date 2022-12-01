@@ -3,28 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <title>Code Quiz - Index</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
-    <script src="./assets/js/scripttt.js" defer></script>
+    <script src="./assets/js/scripts.js" defer></script>
   </head>
   <body>
     <header>
       <h2>Weather Dashboard</h2>
     </header>
-    <main class="flex-container">
-      <section class="flex-row" id="intro">
-        <section class="flex-col-1" id="search-col">
-          <label for="title">Search for a City:</label>
-          <input class="m-1 title" id="city-input" />
-          <button class="m-1 search-btn" id="search-btn">Search</button>
+    <main class="container bg-gray-100">
+      <section class="grid md:grid-cols-4 gap-2 bg-gray-200" id="intro">
+        <section class="md:col-span-1 flex flex-col p-2" id="search-col">
+          <span class="label-text">Search for a City:</span>
+          <input class="input input-bordered mb-2 bg-white" id="city-input" />
+          <button class="btn btn-primary mb-2" id="search-btn">Search</button>
           <hr />
-          <div class="history" id="history"></div>
+          <h3 class="text-center">History</h3>
+          <div class="history flex flex-col" id="history"></div>
         </section>
-        <section class="flex-col-4">
-          <div class="today-forecast" id="today-forecast"></div>
-          <h3>5-Day Forecast:</h3>
-          <div class="five-day-forecast" id="five-day-forecast">
+        <section class="md:col-span-3 bg-gray-300">
+          <h3 class="text-white m-2">Today Forecast</h3>
+          <div class="border-2 m-2 bg-white" id="today-forecast"></div>
+          <h3 class="text-white m-2">5-Day Forecast:</h3>
+          <div class="flex flex-wrap justify-evenly" id="five-day-forecast">
             </div>
           </div>
         </section>
