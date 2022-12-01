@@ -86,6 +86,17 @@ $(function () {
   };
   //////////////////////////////////////////////////////////////////
   /////*** Starts the application ***///////////////////////////////
+  var clearHistoryEl = $("#clear-history");
+
+  var clearHistory = function () {
+    localStorage.clear();
+    location.reload();
+  };
+
+  clearHistoryEl.on("click", () => clearHistory());
+
+  //////////////////////////////////////////////////////////////////
+  /////*** Starts the application ***///////////////////////////////
 
   var searchBtn = $("#search-btn");
 
